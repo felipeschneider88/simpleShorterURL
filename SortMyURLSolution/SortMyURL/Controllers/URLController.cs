@@ -18,13 +18,9 @@ namespace SortMyURL.Controllers
 
         private readonly ILogger<URLController> _logger;
 
-        public URLController( IURLData iURLData)
+
+        public URLController(IURLData iURLData)
         {
-            _IURLData = iURLData;
-        }
-        public URLController(ILogger<URLController> logger, IURLData iURLData)
-        {
-            _logger = logger;
             _IURLData = iURLData;
         }
 
