@@ -5,6 +5,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using Microsoft.Extensions.Caching.Distributed;
+using System.Threading.Tasks;
 
 namespace ShortMyURL.Data
 {
@@ -51,7 +52,7 @@ namespace ShortMyURL.Data
         }
         #endregion
 
-        public async Task<URL> getUrlById(string Id)
+        public async Task<URL> GetUrlById(string Id)
         {
             var url = await distributedCache.GetAsync(Id);
             if (url != null)

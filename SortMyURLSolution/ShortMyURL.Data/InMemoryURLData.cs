@@ -3,27 +3,25 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ShortMyURL.Data
 {
     public class InMemoryURLData : IURLData
     {
-        readonly List<URL> URLs;
+        readonly Dictionary<string,URL> URLs;
 
         public InMemoryURLData()
         {
-            URLs = new List<URL>()
-            {
-                new URL {Id = "algo", URLValue = "https://google.com" },
-                new URL {Id = "otro", URLValue = "https://youtube.com" }
-            };
+            URLs = new Dictionary<string, URL>();
+            URL temp = new URL { Id = "algo", URLValue = "https://google.com" };
+            URLs.Add(temp.Id, temp);
+            temp = new URL { Id = "otro", URLValue = "https://youtube.com" };
+            URLs.Add(temp.Id, temp);
         }
-        public IEnumerable<URL> getUrlById(string Id)
+        public async Task<URL> GetUrlById(string Id)
         {
-            return from uri in URLs
-                   where string.IsNullOrEmpty(Id) || uri.Id.StartsWith(Id)
-                   orderby uri.Id
-                   select uri;
+            return URLs.GetValueOrDefault(Id);
         }
     }
 }

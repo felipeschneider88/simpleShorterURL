@@ -25,9 +25,9 @@ namespace SortMyURL.Controllers
         }
 
         [HttpGet("{Id}")]
-        public IEnumerable<URL> Get(string Id)
+        public Task<URL> Get(string Id)
         {
-            return _IURLData.getUrlById(Id);
+            return _IURLData.GetUrlById(Id);
         }
     }
 }

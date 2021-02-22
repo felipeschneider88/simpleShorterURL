@@ -2,12 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ShortMyURL.Data
 {
     public interface IURLData
     {
-        IEnumerable<URL> getUrlById(string Id);
+        Task<URL> GetUrlById(string Id);
     }
 
 
