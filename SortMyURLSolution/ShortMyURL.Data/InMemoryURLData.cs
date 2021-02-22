@@ -22,5 +22,24 @@ namespace ShortMyURL.Data
         {
             return URLs.GetValueOrDefault(Id);
         }
+        public URL Find(string id)
+        {
+            URL result = new URL();
+            result = URLs.GetValueOrDefault(id);
+            return result;
+        }
+
+        public void Insert(string id, URL temp)
+        {
+            URL aux = Find(id);
+            if (aux == null)
+                URLs.Add(id, temp);
+            else
+            {
+                string error = string.Format("Allread a URL with that ID");
+                throw new ApplicationException(error);
+            }
+        }
+
     }
 }
