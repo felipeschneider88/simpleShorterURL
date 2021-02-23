@@ -41,5 +41,9 @@ namespace ShortMyURL.Data
             }
         }
 
+        public async Task<URL> InsertUrl(URL url)
+        {
+            await Insert(url.Id, url);
+        }
     }
 }

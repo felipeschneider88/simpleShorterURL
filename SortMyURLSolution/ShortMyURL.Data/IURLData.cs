@@ -9,6 +9,8 @@ namespace ShortMyURL.Data
     public interface IURLData
     {
         Task<URL> GetUrlById(string Id);
+
+        Task<URL> InsertUrl(URL url);
     }
 
 
