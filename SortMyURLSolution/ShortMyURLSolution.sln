@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShortMyURL.Data", "ShortMyU
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShortMyURL.Core", "ShortMyURL.Core\ShortMyURL.Core.csproj", "{359B4D4A-2F90-40E0-BCCF-C2A32B949D71}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "xUnit.ShoryMyURL.Tests", "TDDShoryMyURL.Tests\xUnit.ShoryMyURL.Tests.csproj", "{274C85AC-57B3-44EC-9B11-CDD740841385}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "xUnit.ShortMyURL.Tests", "TDDShoryMyURL.Tests\xUnit.ShortMyURL.Tests.csproj", "{274C85AC-57B3-44EC-9B11-CDD740841385}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit.ShortMyUrl.Tests", "NUnit.ShortMyUrl.Tests\NUnit.ShortMyUrl.Tests.csproj", "{F29954C8-52AD-46BB-B8A6-AF0A88906B79}"
 EndProject
